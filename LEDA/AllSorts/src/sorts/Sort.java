@@ -207,6 +207,23 @@ public class Sort {
 		
 	}
 
+	public static void insertionSortRecursivo(int[] array, int n) {
+		    
+		    if(n < 1) return;
+		    insertionSortRecursivo(array, n-1);
+		    int ultimo = array[n];
+		    int j = n-1;
+		    
+		    while(j >= 0 && array[j] > ultimo) {
+		      array[j+1] = array[j];
+		      j--;
+		    }
+		    
+		    array[j+1] = ultimo;
+		    System.out.println(Arrays.toString(array));
+
+		  }
+	  
 	public static void main(String[] args) {
 		
 		int[] array1 = {6,6,6,6,6,6};
