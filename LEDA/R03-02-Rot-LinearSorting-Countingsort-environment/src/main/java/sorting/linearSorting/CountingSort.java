@@ -1,4 +1,4 @@
-wqpackage sorting.linearSorting;
+package sorting.linearSorting;
 
 import sorting.AbstractSorting;
 
