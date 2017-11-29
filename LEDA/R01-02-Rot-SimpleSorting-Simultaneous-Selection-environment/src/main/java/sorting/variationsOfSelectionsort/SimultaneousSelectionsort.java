@@ -1,7 +1,5 @@
 package sorting.variationsOfSelectionsort;
 
-import java.util.Arrays;
-
 import sorting.AbstractSorting;
 
 /**
@@ -17,37 +15,30 @@ public class SimultaneousSelectionsort<T extends Comparable<T>> extends Abstract
 	
 	public void sort(T[] array, int leftIndex, int rightIndex) {
 		
-		int maior, menor;
-		
-		for (int i = 0; i < rightIndex; i++) {
-			maior = i;
-			menor = i;
-			for (int j = i+1; j <= rightIndex; j++) {
-				if(array[j].compareTo(array[maior]) > 0) {
-					maior = j;
-				}
-				if(array[j].compareTo(array[menor]) < 0) {
-					menor = j;
-				}
-			}
-			util.Util.swap(array, i, menor);
-			util.Util.swap(array, array.length - 1 - i, i);
-		}
+	    int maior, menor;
+	    int k = array.length-1;
+	    
+	    for(int i = 0; i <= k; i++) {
+	      maior = i;
+	      menor = i;
+	      for(int j = i+1; j <= k; j++) {
+	        if(array[j].compareTo(array[menor]) < 0) {
+	          menor = j;
+	        }
+	      }
+
+	      util.Util.swap(array, i, menor);
+	      
+	      for(int j = i+1; j <= k; j++) {
+	        if(array[j].compareTo(array[maior]) > 0) {
+	          maior = j;
+	        }
+	      }
+
+	      util.Util.swap(array, k, maior);      
+	      k--;
+	    }
 	
-	}
-	
-	
-	
-	
-	public static void main(String[] args) {
-		
-		Integer[] a = {6,5,3,4,2,1};
-		SimultaneousSelectionsort<Integer> b = new SimultaneousSelectionsort<Integer>();
-		
-		b.sort(a);
-		
-		System.out.println(Arrays.toString(a));
-	}
-	
+	}	
 	
 }

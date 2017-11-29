@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import sorting.AbstractSorting;
 import sorting.simpleSorting.*;
+import sorting.variationsOfSelectionsort.SimultaneousSelectionsort;
 
 public class StudentSortingTest {
 
@@ -39,7 +40,7 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = new InsertionSort<Integer>();
+		this.implementation = new SimultaneousSelectionsort<Integer>();
 	}
 
 	public void populaVetorTamanhoPar(Integer[] arrayPadrao) {

@@ -1,6 +1,5 @@
 package adt.linkedList;
 
-import java.util.Arrays;
 
 public class SingleLinkedListImpl<T> implements LinkedList<T> {
 
@@ -12,7 +11,7 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 
 	@Override
 	public boolean isEmpty() {
-		return(this.head.isNIL());
+		return(this.getHead().isNIL());
 	}
 
 	@Override
@@ -20,13 +19,11 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 		if(this.isEmpty()) return 0;
 		
 		int tamanho = 0;
-		SingleLinkedListNode<T> aux = this.head;
-		
+		SingleLinkedListNode<T> aux = head;
 		while(!aux.isNIL()) {
 			tamanho += 1;
 			aux = aux.next;
 		}
-		
 		return tamanho;
 	}
 
@@ -34,12 +31,11 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 	public T search(T element) {
 		if(this.isEmpty()) return null;
 		
-		SingleLinkedListNode<T> aux = null;
-		while(aux != element) {
+		SingleLinkedListNode<T> aux = this.head;
+		while(!aux.isNIL() && !aux.data.equals(element)) {
 			aux = aux.next;
 		}
-		
-		return (T) aux;
+		return (T) aux.data;
 	}
 
 	@Override
@@ -58,24 +54,33 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 			SingleLinkedListNode<T> newNode = new SingleLinkedListNode<T>(element, aux.next);
 			aux.next = newNode;
 		}
-			
-
 	}
 
 	@Override
 	public void remove(T element) {
 
+		if(this.isEmpty()) return;
+		if(this.head.data.equals(element)) {
+			this.setHead(head.next);
+			return;
+		}
+		SingleLinkedListNode<T> aux = this.head;
+		while(!aux.next.isNIL() && !aux.next.data.equals(element)) {
+			aux = aux.next;
+		}
+		aux.next = aux.next.next;
 	}
 
 	@Override
 	public T[] toArray() {
 		
+		@SuppressWarnings("unchecked")
 		T[] list = (T[]) new Object[this.size()];
 		
 		SingleLinkedListNode<T> aux = this.head;
 		int i = 0;
 		while(!aux.isNIL()) {
-			list[i] = (T) aux;
+			list[i] = aux.data;
 			aux = aux.next;
 			i++;
 		}
@@ -91,15 +96,4 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 	public void setHead(SingleLinkedListNode<T> head) {
 		this.head = head;
 	}
-	
-	public static void main(String[] args) {
-		
-		SingleLinkedListImpl<Integer> list = new SingleLinkedListImpl<Integer>();
-		System.out.println(list.head);
-		list.insert(new Integer(5));
-		list.insert(new Integer(3));
-		list.insert(new Integer(2));
-		System.out.println(Arrays.toString(list.toArray()));
-	}
-
 }
