@@ -48,14 +48,14 @@ public class HashtableClosedAddressImpl<T> extends AbstractHashtableClosedAddres
     */
    int getPrimeAbove(int number) {
 	   
-	   if (util.Util.isPrime(number)) return number;
+	   if (util.Util.isPrime(number+1)) return number+1;
 	   return getPrimeAbove(number+1);
    }
 
    @Override
    public void insert(T element) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Not implemented yet!");
+      
+	   this.table[elementgetHashFunction()];
    }
 
    @Override
