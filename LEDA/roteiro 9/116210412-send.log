@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2017-12-11T14:28:25.179-0300</date>
+  <logger>JOSE RAMON FRAGOSO DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 116210412-JOSE RAMON FRAGOSO DA SILVA.zip was received. It was sent by JOSE RAMON FRAGOSO DA SILVA from IP 192.168.0.107</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2017-12-11T18:52:20.131-0300</date>
+  <logger>JOSE RAMON FRAGOSO DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 116210412-JOSE RAMON FRAGOSO DA SILVA.zip was received. It was sent by JOSE RAMON FRAGOSO DA SILVA from IP 192.168.0.107</message>
+</record>

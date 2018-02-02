@@ -27,6 +27,8 @@ public class StudentBSTTest {
 
 	@Test
 	public void testInit() {
+		assertEquals(NIL, tree.search(12));
+
 		assertTrue(tree.isEmpty());
 		assertEquals(0, tree.size());
 		assertEquals(-1, tree.height());
@@ -97,7 +99,6 @@ public class StudentBSTTest {
 	@Test
 	public void testSize() {
 		fillTree(); // -40 -34 0 2 5 6 9 12 23 67 76 232
-
 		int size = 12;
 		assertEquals(size, tree.size());
 
