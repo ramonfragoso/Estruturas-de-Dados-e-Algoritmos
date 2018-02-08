@@ -2,17 +2,7 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-01-31T16:13:03.018-0300</date>
-  <logger>JOSE RAMON FRAGOSO DA SILVA</logger>
-  <level>FINE</level>
-  <message>File 116210412-JOSE RAMON FRAGOSO DA SILVA.zip was received. It was sent by JOSE RAMON FRAGOSO DA SILVA from IP 150.165.42.112</message>
-</record>
-</log>
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2018-02-02T10:49:47.075-0300</date>
+  <date>2018-02-05T15:09:38.324-0300</date>
   <logger>JOSE RAMON FRAGOSO DA SILVA</logger>
   <level>FINE</level>
   <message>File 116210412-JOSE RAMON FRAGOSO DA SILVA.zip was received. It was sent by JOSE RAMON FRAGOSO DA SILVA from IP 192.168.0.106</message>
@@ -22,7 +12,17 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-02-02T11:04:41.285-0300</date>
+  <date>2018-02-07T12:29:24.656-0300</date>
+  <logger>JOSE RAMON FRAGOSO DA SILVA</logger>
+  <level>FINE</level>
+  <message>File 116210412-JOSE RAMON FRAGOSO DA SILVA.zip was received. It was sent by JOSE RAMON FRAGOSO DA SILVA from IP 192.168.0.106</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-02-07T13:32:05.986-0300</date>
   <logger>JOSE RAMON FRAGOSO DA SILVA</logger>
   <level>FINE</level>
   <message>File 116210412-JOSE RAMON FRAGOSO DA SILVA.zip was received. It was sent by JOSE RAMON FRAGOSO DA SILVA from IP 192.168.0.106</message>
